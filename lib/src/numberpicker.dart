@@ -223,7 +223,6 @@ class _NumberPickerState extends State<NumberPicker> {
       child: GestureDetector(
         onTap: () => Navigator.pop(context),
         child: child,
-
       ),
     );
   }
@@ -278,11 +277,16 @@ class _NumberPickerSelectedItemDecoration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: IgnorePointer(
-        child: Container(
-          width: isVertical ? double.infinity : itemExtent,
-          height: isVertical ? itemExtent : double.infinity,
-          decoration: decoration,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: IgnorePointer(
+          child: Container(
+            width: isVertical ? double.infinity : itemExtent,
+            height: isVertical ? itemExtent : double.infinity,
+            decoration: decoration,
+          ),
         ),
       ),
     );

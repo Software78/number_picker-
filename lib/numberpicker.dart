@@ -1,2 +1,2 @@
-export 'package:numberpicker/src/decimal_numberpicker.dart';
-export 'package:numberpicker/src/numberpicker.dart';
+export 'src/decimal_numberpicker.dart';
+export 'src/numberpicker.dart';
