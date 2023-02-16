@@ -220,7 +220,11 @@ class _NumberPickerState extends State<NumberPicker> {
       width: widget.itemWidth,
       height: widget.itemHeight,
       alignment: Alignment.center,
-      child: child,
+      child: GestureDetector(
+        onTap: () => Navigator.pop(context),
+        child: child,
+
+      ),
     );
   }
 
